@@ -30,6 +30,7 @@ end
 def handle_request(client_socket)
   request = client_socket.recv(1056)
   response = run_application_code
+  puts "I am logging: #{response}"
   client_socket.print response
 end
 
